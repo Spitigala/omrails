@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Omrails</title>
+      <title>smart SOS</title>
      <%= stylesheet_link_tag    "application", :media => "all" %>
      <%= javascript_include_tag "application" %>
      <%= csrf_meta_tags %>
@@ -11,16 +11,16 @@
         <header class="navbar navbar-fixed-top">
           <div class="navbar-inner">
             <div class="container">
-              <%= link_to "One Month Rails", root_path, id: "logo" %>
+              <%= link_to "smart SOS", root_path, id: "logo" %>
               <nav>
                 <ul class="nav pull-right">
                     <li><%= link_to "About", about_path %></li>
-					<% if user_signed_in? %>
-					<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-					<% else %>
-					<li><%= link_to "Sign In", new_user_session_path %></li>
-					<% end %>
-					
+        			<% if user_signed_in? %>
+        			<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+        			<% else %>
+        			<li><%= link_to "Sign In", new_user_session_path %></li>	
+        			<% end %>
+
                 </ul>
               </nav>
             </div>
@@ -32,5 +32,29 @@
             <% end %>
             <%= yield %>
         </div>
+        <div class="row">
+                <div class="span4">
+                  <h2>Reach Out</h2>
+                  <p> Local government, non-profit and business organizations can reach out to the local community for help by posting volunteer opportunities and donation needs.</p>
+                  <p><a class="btn" href="#">View details &raquo;</a></p>
+                </div>
+                <div class="span4">
+                  <h2>Discover</h2>
+                  <p>Find out what orgnizations and individuals are in need of help around you, and take action to make a difference in your community</p>
+                  <p><a class="btn" href="#">View details &raquo;</a></p>
+               </div>
+                <div class="span4">
+                  <h2>Stay Informed</h2>
+                  <p>Get updates on the latest developments during times of disater and find out where to find food, shelter and other basic needs.</p>
+                  <p><a class="btn" href="#">View details &raquo;</a></p>
+                </div>
+              </div>
+              <hr>
+
+                    <footer>
+                      <p>&copy; smart SOS 2012</p>
+                    </footer>
+
+                  </div>
     </body>
 </html>
